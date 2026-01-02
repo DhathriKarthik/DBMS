@@ -1,0 +1,79 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make sure root takes full screen */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Simple container styling */
+.app-container {
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  background-color: #1e88e5;
+  color: white;
+  padding: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Layout */
+.main {
+  display: flex;
+  margin-top: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: white;
+  padding: 15px;
+  border-right: 1px solid #ddd;
+}
+
+/* Content area */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Mobile card */
+.mobile-card {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  margin-top: 8px;
+  cursor: pointer;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+/* Input */
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+}
