@@ -1,8 +1,7 @@
 {
   "name": "backend",
-  "type":"module",
+  "type": "module",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,8 +11,9 @@
   "author": "venushree",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "mysql2": "^3.6.0",
-    "cors": "^2.8.5"
-  }
+    "cors": "^2.8.5",
+    "express": "^4.22.1",
+    "mysql2": "^3.6.0"
+  },
+  "description": ""
 }

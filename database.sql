@@ -4,7 +4,8 @@ USE mobilestore;
 CREATE TABLE USER (
   user_id INT AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(30),
-  password VARCHAR(30)
+  password VARCHAR(30),
+  role VARCHAR(10) DEFAULT 'user'
 );
 
 CREATE TABLE MOBILE (
@@ -17,6 +18,14 @@ CREATE TABLE MOBILE (
   stock INT
 );
 
+CREATE TABLE addToCart (
+  user_id INT,
+  mobile_id INT,
+  PRIMARY KEY (user_id, mobile_id),
+  FOREIGN KEY (user_id) REFERENCES USER(user_id) ON DELETE CASCADE,
+  FOREIGN KEY (mobile_id) REFERENCES MOBILE(mobile_id) ON DELETE CASCADE
+);
+
 CREATE TABLE ORDERS (
   order_id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT,
@@ -26,7 +35,7 @@ CREATE TABLE ORDERS (
   FOREIGN KEY (mobile_id) REFERENCES MOBILE(mobile_id)
 );
 
-INSERT INTO USER(username,password) VALUES ('admin','admin');
+INSERT INTO USER(username,password,role) VALUES ('admin','admin','admin'), ('user','user','user');
 
 INSERT INTO MOBILE(company,model,ram,storage,price,stock) VALUES
 ('Samsung','S21','8GB','128GB',55000,5),
